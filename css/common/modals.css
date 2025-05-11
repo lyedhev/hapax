@@ -1,0 +1,111 @@
+@import url("../common/colour_scheme.css");
+
+.modal {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, backdrop-filter 0.5s ease, background-color 0.5s ease;
+}
+
+.modal.visible {
+    opacity: 1;
+    visibility: visible;
+}
+  
+.modal_content {
+    padding: 20px 30px;
+    width: auto;
+    position: relative;
+}
+
+.modal_container {
+    background: var(--body);
+    padding: 20px 30px;
+}
+
+
+.close_button {
+    position: absolute;
+    top: 25px;
+    right: 22px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.close_button svg {
+    color: var(--lightest);
+    height: 30px;
+    width: 30px;
+    transition: ease 0.15s;
+}
+
+.close_button:hover svg {
+    color: var(--accent);
+    transition: ease 0.3s;
+}
+
+.modal#lex_modal {
+    background: red;
+}
+
+.modal h2 {
+    margin-bottom: 2px;
+    color: var(--lightest);
+}
+
+.modal .modal_submit {
+    width: 100%;
+    height: 2rem;
+    font-size: 1.1rem;
+    border-style: none;
+    border-width: 1px;
+    border-color: var(--lightest);
+    background: var(--darkest);
+    color: var(--lightest);
+    transition: ease 0.2s;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+.modal .modal_submit:hover {
+    background: var(--accent);
+    font-weight: 900;
+    transition: ease 0.4s;
+    color: var(--darkest);
+}
+
+.modal input.modal_input {
+    margin-top: 0.2rem;
+    background: rgba(0, 0, 0, 0.1);
+    border-style: none;
+    padding: 0 0.5rem;
+    width: 200px;
+    margin-right: auto;
+    display: block;
+    font-size: 1rem;
+}
+
+.modal input.modal_input.main_input {
+    font-size: 1.5rem;
+}
+
+.modal button.danger {
+    background: var(--accent);
+    color: var(--lightest);
+    font-size: 1.1rem;
+}
+
+.modal button:hover.danger {
+    background: var(--lightest);
+    color: var(--darkest);
+}
+ 

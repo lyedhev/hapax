@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hapax</title>
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar_header">
+        <span><i id="hapax_logo"></i></span>
+      </div>
+      <div class="sidebar_links">
+        <!-- Contains all buttons within the sidebar -->
+
+        <div class="drop_container">
+          <!-- Contains the drop-down menu -->
+          <button class="main" id="drop_btn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+              <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM8.547 4.505a8.25 8.25 0 1 0 11.672 8.214l-.46-.46a2.252 2.252 0 0 1-.422-.586l-1.08-2.16a.414.414 0 0 0-.663-.107.827.827 0 0 1-.812.21l-1.273-.363a.89.89 0 0 0-.738 1.595l.587.39c.59.395.674 1.23.172 1.732l-.2.2c-.211.212-.33.498-.33.796v.41c0 .409-.11.809-.32 1.158l-1.315 2.191a2.11 2.11 0 0 1-1.81 1.025 1.055 1.055 0 0 1-1.055-1.055v-1.172c0-.92-.56-1.747-1.414-2.089l-.654-.261a2.25 2.25 0 0 1-1.384-2.46l.007-.042a2.25 2.25 0 0 1 .29-.787l.09-.15a2.25 2.25 0 0 1 2.37-1.048l1.178.236a1.125 1.125 0 0 0 1.302-.795l.208-.73a1.125 1.125 0 0 0-.578-1.315l-.665-.332-.091.091a2.25 2.25 0 0 1-1.591.659h-.18c-.249 0-.487.1-.662.274a.931.931 0 0 1-1.458-1.137l1.279-2.132Z" clip-rule="evenodd" />
+            </svg>
+            <p>LANGUAGE</p>
+          </button>
+          <div id="drop_content" class="drop_content hidden">
+            <button id="lang_add">A D D • N E W • L A N G U A G E</button>
+            <div id="drop_queried_content">
+            </div>
+          </div>
+        </div>
+
+        <!-- The three page-changing buttons -->
+        <button class="page main" data-page="grammar" disabled>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M4.5 1.938a.75.75 0 0 1 1.025.274l.652 1.131c.351-.138.71-.233 1.073-.288V1.75a.75.75 0 0 1 1.5 0v1.306a5.03 5.03 0 0 1 1.072.288l.654-1.132a.75.75 0 1 1 1.298.75l-.652 1.13c.286.23.55.492.785.786l1.13-.653a.75.75 0 1 1 .75 1.3l-1.13.652c.137.351.233.71.288 1.073h1.305a.75.75 0 0 1 0 1.5h-1.306a5.032 5.032 0 0 1-.288 1.072l1.132.654a.75.75 0 0 1-.75 1.298l-1.13-.652c-.23.286-.492.55-.786.785l.652 1.13a.75.75 0 0 1-1.298.75l-.653-1.13c-.351.137-.71.233-1.073.288v1.305a.75.75 0 0 1-1.5 0v-1.306a5.032 5.032 0 0 1-1.072-.288l-.653 1.132a.75.75 0 0 1-1.3-.75l.653-1.13a4.966 4.966 0 0 1-.785-.786l-1.13.652a.75.75 0 0 1-.75-1.298l1.13-.653a4.965 4.965 0 0 1-.288-1.073H1.75a.75.75 0 0 1 0-1.5h1.306a5.03 5.03 0 0 1 .288-1.072l-1.132-.653a.75.75 0 0 1 .75-1.3l1.13.653c.23-.286.492-.55.786-.785l-.653-1.13A.75.75 0 0 1 4.5 1.937Zm1.14 3.476a3.501 3.501 0 0 0 0 5.172L7.135 8 5.641 5.414ZM8.434 8.75 6.94 11.336a3.491 3.491 0 0 0 2.81-.305 3.49 3.49 0 0 0 1.669-2.281H8.433Zm2.987-1.5H8.433L6.94 4.664a3.501 3.501 0 0 1 4.48 2.586Z" clip-rule="evenodd" />
+          </svg>
+          <p>GRAMMAR</p>
+        </button>
+        <button class="page main" data-page="corpus" disabled>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+            <path d="M7.25 3.688a8.035 8.035 0 0 0-4.872-.523A.48.48 0 0 0 2 3.64v7.994c0 .345.342.588.679.512a6.02 6.02 0 0 1 4.571.81V3.688ZM8.75 12.956a6.02 6.02 0 0 1 4.571-.81c.337.075.679-.167.679-.512V3.64a.48.48 0 0 0-.378-.475 8.034 8.034 0 0 0-4.872.523v9.268Z" />
+          </svg>          
+          <p>LEXICON</p>
+        </button>
+        <button class="page main" data-page="sono">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+            <path d="M1 8.849c0 1 .738 1.851 1.734 1.947L3 10.82v2.429a.75.75 0 0 0 1.28.53l1.82-1.82A3.484 3.484 0 0 1 5.5 10V9A3.5 3.5 0 0 1 9 5.5h4V4.151c0-1-.739-1.851-1.734-1.947a44.539 44.539 0 0 0-8.532 0C1.738 2.3 1 3.151 1 4.151V8.85Z" />
+            <path d="M7 9a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2h-.25v1.25a.75.75 0 0 1-1.28.53L9.69 12H9a2 2 0 0 1-2-2V9Z" />
+          </svg>          
+          <p>SOUND</p><p>CHANGE</p>
+        </button>
+      </div>
+    </aside>
+
+    <!-- CONTENT PAGES -->
+    <div id="grammar" class="content_container">
+      <div class="content" id="grammar">
+        <p class="side_text_lang"></p>
+        <p class="side_text">G R A M M A R</p>
+        <div class="grammar_parent">
+          <table cellspacing="0" class="grammar_table">
+            <thead>
+              <tr class="table_header">
+                <th>NAME</th> 
+                <th>ABBREVIATION</th>
+                <th>AMOUNT OF WORDS</th>
+                <th></th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody class="table_queried" id="table_queried">
+            </tbody>
+          </table>
+          <button id="table_add" class="table_add" disabled>A D D • N E W • C A T E G O R Y</button>
+        </div>
+      </div>
+    </div>
+    <div id="corpus" class="content_container">
+        <div class="content" id="corpus">
+          <p class="side_text_lang"></p>
+          <p class="side_text">L E X I C O N</p>
+          <input type="text" id="lex_search">
+          <div class="card_container" id="card_container">
+          </div>
+      </div>
+    </div>
+    <div id="sono" class="content_container">
+      <div class="content" id="sono">
+        <p class="side_text_lang"></p>
+        <p class="side_text">S O U N D • C H A N G E</p>
+        <div class="sono_inside">
+          <div class="sono_left">
+            <div class="sono_parent" id="rules">
+              <h2>RULES</h2>
+              <textarea name="sono_rules" id="sono_rules" spellcheck="false"></textarea>
+            </div>
+            <div class="sono_parent" id="input">
+              <h2>INPUT</h2>
+              <textarea name="sono_input" id="sono_input" spellcheck="false"></textarea>
+            </div>
+          </div>
+          <button class="apply_change" id="btn_apply">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-4">
+              <path fill-rule="evenodd" d="M12.78 7.595a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06l2.72-2.72-2.72-2.72a.75.75 0 0 1 1.06-1.06l3.25 3.25Zm-8.25-3.25 3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06l2.72-2.72-2.72-2.72a.75.75 0 0 1 1.06-1.06Z" clip-rule="evenodd" />
+            </svg>            
+          </button>
+
+          <div class="sono_parent" id="output">
+            <h2>OUTPUT</h2>
+            <textarea readonly name="sono_output" id="sono_output"></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- MODAL BOXES |=========| THESE ARE HIDDEN BY DEFAULT AND THEN UNHIDDEN WHEN NEEDED -->
+    <!-- Modal Language box -->
+    <div id="lang_modal_box" class="modal">
+      <div class="modal_content">
+        <span id="lang_modal_close" class="close_button">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94 5.28 4.22Z" />
+          </svg>
+        </span>
+        <h2 style="margin-bottom: 2px">ADD LANGUAGE</h2>
+        <form id="add_lang_form">
+          <div class="modal_container">
+            <input type="text" id="lang_name" class="modal_input main_input" placeholder="language" name="lang_name" required>
+          </div>
+          <button type="submit" class="modal_submit">S U B M I T</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Modal Class box -->
+    <div id="class_modal_box" class="modal">
+      <div class="modal_content">
+        <span id="class_modal_close" class="close_button">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94 5.28 4.22Z" />
+          </svg>
+        </span>
+        <h2 style="margin-bottom: 2px">ADD CLASS</h2>
+          <form id="add_class_form">
+            <div class="modal_container">
+              <input type="text" class="modal_input main_input" id="class_name" placeholder="name" name="class_name" required>
+              <input type="text" class="modal_input" id="class_abb" placeholder="abbreviation" name="class_abb" required>
+            </div>
+            <button type="submit" class="modal_submit">S U B M I T</button>
+          </form>
+      </div>
+    </div>
+
+    <!-- Modal Word box -->
+    <div id="word_modal_box" class="modal">
+      <div class="modal_content" id="lex_modal">
+        <span id="word_modal_close" class="close_button">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94 5.28 4.22Z" />
+          </svg>
+        </span>
+        <h2 id="word_modal_heading">ADD WORD</h2>
+        <form id="word_form">
+          <div class="card">
+            <div class="card_header">
+              <input type="text" id="word_title" placeholder="word" required>
+              <select id="word_class" placeholder="class" required></select>
+              <input type="text" id="word_transcription" placeholder="transcription">
+          </div>
+          <div class="card_band">
+              from <input type="text" id="word_origin_lang" placeholder="language">, <input type="text" id="word_origin_word" placeholder="word">
+          </div>
+          <div class="card_definition_content"><textarea id="word_definition" placeholder="definition" required></textarea></div>
+          </div>
+          <button type="submit" class="modal_submit">S U B M I T</button>
+        </form>
+      </div>
+    </div>
+    
+    <!-- Modal Delete box -->
+    <div id="delete_modal_box" class="modal">
+      <div class="modal_content">
+        <span id="delete_modal_close" class="close_button">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94 5.28 4.22Z" />
+          </svg>
+        </span>
+        <h2 id="delete_modal_heading"></h2>
+        <div class="modal_container">
+          <p id="delete_modal_message"></p>
+        </div>
+        <button id="delete_modal_confirm" class="modal_submit">C O N F I R M</button>
+      </div>
+  </div>
+
+    <script type="module" src="./renderer/main_renderer.js"></script>
+  </body>
+</html>

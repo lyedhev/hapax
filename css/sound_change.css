@@ -1,0 +1,87 @@
+@import url("common/colour_scheme.css");
+
+.sono_parent h2 {
+    background: var(--darkest);
+    padding-left: 0.5rem;
+    color: var(--lightest);
+    transition: ease 0.15s;
+}
+
+.sono_parent:has(textarea:focus) h2 {
+    color: var(--darkest);
+    background: var(--accent);
+    transition: ease 0.3s;
+}
+
+.sono_inside{
+    display: flex;
+    justify-content: space-between;
+}
+
+.sono_parent#rules{
+    float: left;
+    height: 600px;
+    width: 200px;
+    margin-left: 1rem;
+    margin-top: 20px;
+    margin-bottom: 80px;
+}
+
+.sono_parent#input{
+    float: left;
+    height: 600px;
+    width: 350px;
+    opacity: 100%;
+    margin-left: 2rem;
+    margin-top: 20px;
+    margin-bottom: 80px;
+}
+
+.sono_parent#output{
+    float: right;
+    height: 600px;
+    width: 350px;
+    opacity: 100%;
+    margin-right: 1rem;
+    margin-top: 20px;
+    margin-bottom: 80px;
+}
+
+.sono_parent textarea{
+    font-size: 16px;
+    height: calc(100% - 2rem);
+    max-height:calc(100% - 2rem);
+    width: 100%;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.1);
+    border-style: none;
+    resize: vertical;
+}
+
+.content#sono button{
+    float: right;
+    height: auto;
+    width: auto;
+    margin-top: 20px;
+    margin-bottom: 80px;
+    border-style: none;
+    background: var(--darkest);
+    transition: ease 0.2s;
+}
+
+.content#sono button:hover{
+    background: var(--accent);
+    transition: ease 0.4s;
+}
+
+.content#sono button svg{
+    height: 50px;
+    width: 50px;
+    color: var(--lightest);
+    transition: ease 0.2s;
+}
+
+.content#sono button:hover svg{
+    color: var(--darkest);
+    transition: ease 0.4s;
+}

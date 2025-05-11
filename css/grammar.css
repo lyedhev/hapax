@@ -1,0 +1,88 @@
+@import url("common/colour_scheme.css");
+
+.grammar_parent{
+    width: 100%;
+    padding: 1rem;
+}
+
+.grammar_table{
+    padding-top: 2rem;
+    width: 100%;
+}
+
+.grammar_parent .table_header {
+    background-color: var(--grey_dark);
+    color: white;
+}
+
+.grammar_parent tr {
+    height: 50px;
+    transition: ease 0.2s;
+}
+
+.grammar_parent tbody tr:hover {
+    background: var(--lightest);
+    transition: ease 0.4s;
+}
+
+.grammar_parent tbody tr:hover svg {
+    opacity: 1;
+    transition: ease 0.3s;
+}
+
+
+.grammar_parent td {
+    padding: 1rem;
+    text-align: center;
+}
+
+.grammar_parent .table_row {
+    background-color: var(--grey_light);
+}
+
+.grammar_parent .table_add{
+    width: 100%;
+    height: 70px;
+    margin-top: 1rem;
+    padding: 0px 1rem;
+    font-size: 1.5rem;
+    background: var(--darkest);
+    color: var(--lightest);
+    border-style: none;
+    transition: ease 0.2s;
+}
+
+.grammar_parent .table_add:hover {
+    background: var(--accent);
+    transition: ease 0.4s;
+    color: var(--darkest);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.class_delete, .class_edit {
+    border-style: none;
+    background: none;
+}
+
+.class_delete svg, .class_edit svg {
+    height:30px;
+    width:30px;
+    margin:auto;
+    fill: var(--darkest);
+    transition: ease 0.2s;
+    opacity: 0;
+}
+
+.class_delete:hover svg, .class_edit:hover svg {
+    fill: var(--accent);
+    transition: ease 0.4s;
+    cursor: pointer;
+}
+
+.hidden_icon {
+    height:30px;
+    width:30px;
+    margin:auto;
+    fill: var(--grey_dark);
+}

@@ -1,0 +1,193 @@
+@import url("common/colour_scheme.css");
+
+input#lex_search{
+  height: 3rem;
+  width: calc(100% - 2rem);
+  background: var(--grey_mid);
+  border-style: none;
+  margin: 1rem;
+  padding: 1rem;
+  font-size: 20px;
+}
+
+.card_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.lex_add {
+  background: var(--darkest);
+  border-style: none;
+  width: 50px;
+  height: 100%;
+  margin-right: 1rem;
+  cursor: pointer;
+  text-align: center;
+  margin-bottom: 1rem;
+  transition: ease 0.2s;
+}
+
+.lex_add.alt_ver {
+  width: calc(100% - 2rem);
+  height: 70px;
+  margin-top: 0px;
+  margin: 0px 1rem;
+  font-size: 1.5rem;
+  color: var(--lightest);
+}
+
+.lex_add.alt_ver:hover {
+  color: var(--darkest);
+  font-weight: bold;
+}
+
+.lex_add svg {
+  color: var(--lightest);
+  transition: ease 0.2s;
+}
+
+.lex_add:hover svg {
+  color: var(--darkest);
+  transition: ease 0.4s;
+}
+
+.lex_add:hover {
+  background: var(--accent);
+  transition: ease 0.4s;
+}
+
+.first_card_container {
+  display: flex;
+  flex-direction:row;
+}
+
+.first_card {
+  background: var(--accent);
+  overflow: hidden;
+  width: 350px;
+  height: 100%;
+  break-inside: avoid;
+  margin-bottom: 1rem;
+}
+
+.card {
+  display: block;
+  background: var(--accent);
+  overflow: hidden;
+  width: 350px;
+  height: auto;
+  break-inside: avoid;
+  margin-bottom: 1rem;
+}
+  
+.card input {
+  background: rgba(0, 0, 0, 0.1);
+  border-style: none;
+  padding: 0 0.5rem;
+}
+
+.card_band ::placeholder{
+  color: var(--grey_dark);
+}
+
+.card_header{
+  background: var(--lightest);
+  min-height: 80px;
+  padding: 0.5rem 1rem;
+  position: relative;
+}
+
+.card_header .card_actions {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  gap: 0.3rem;
+}
+
+.card .word_edit_btn, .card .word_delete_btn,
+.first_card_container .word_edit_btn, .first_card_container .word_delete_btn {
+  height: 30px;
+  width: 30px;
+  background: none;
+  border-style: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  opacity: 0;
+  transition: ease 0.2s;
+}
+
+.card:hover .word_edit_btn, .card:hover .word_delete_btn,
+.first_card_container:hover .word_edit_btn, .first_card_container:hover .word_delete_btn {
+  opacity: 1;
+}
+
+.card:hover .word_edit_btn:hover, .card:hover .word_delete_btn:hover,
+.first_card_container:hover .word_edit_btn:hover, .first_card_container:hover .word_delete_btn:hover {
+  color: var(--accent);
+  transition: ease 0.4s;
+}
+
+.card_header input#word_title{
+  margin-top: 1rem;
+  font-size: 1.5em;
+  font-weight: bold;
+  width: 100%;
+}
+
+.card_header input#word_class{
+  margin-top: 0.2rem;
+  width: 100px;
+}
+
+.card_header input#word_transcription{
+  margin-top: 0.2rem;
+  width: 213px;
+}
+
+.card_band{
+  height: 2rem;
+  padding: 5px 1rem;
+  font-size: 1.05rem;
+}
+
+.card_band input#word_origin_lang{
+  margin-top: 0.2rem;
+  font-size: 1.05rem;
+  width: 148px;
+  font-weight: bold;
+}
+
+.card_band input#word_origin_word{
+  margin-top: 0.2rem;
+  width: 120px;
+  font-weight: bold;
+  font-size: 1.05rem;
+}
+
+.card_definition_content{
+  background: var(--darkest);
+  color: var(--grey_light);
+  height: 100%;
+  padding: 1rem;
+  color: white;
+  white-space: pre-wrap;
+  text-indent: 0;
+}
+
+.card_definition_content textarea{
+  width: 100%;
+  padding: 0.5rem;
+  resize: vertical;
+  border-style: none;
+  background: var(--grey_dark);
+  color: var(--lightest);
+  font-size: 1rem;
+}
+
+.card_definition_content textarea::placeholder{
+  color: var(--grey_light);
+}
+  

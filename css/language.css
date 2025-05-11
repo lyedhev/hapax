@@ -1,0 +1,108 @@
+@import url("common/colour_scheme.css");
+
+.drop_container {
+    position: relative;
+    display: block;
+    z-index: 9999;
+    
+}
+  
+.drop_content {
+  position: absolute;
+  opacity: 0;
+  width: 255px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  
+  left: 180%;
+  top: 0;
+
+  transition: ease 0.1s;
+}
+
+#drop_queried_content {
+  margin-top: 0.5rem;
+  background: var(--body);
+}
+
+.drop_content.visible {
+  visibility: visible;
+  opacity: 1;
+
+  transition: ease 0.25s;
+}
+
+.drop_content button#lang_add{
+  background-color: var(--darkest);
+  border-style: none;
+  color: var(--lightest);
+  transition: 0.2s;
+  font-size: 1rem;
+  width: 100%;
+  padding: 0.5rem;
+}
+
+.drop_content button#lang_add:hover {
+  background: var(--accent);
+  font-weight: bold;
+  color: var(--darkest);
+  transition: 0.4s;
+}
+
+  .dropdown_item_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    padding: 0.3rem;
+    white-space: nowrap;
+    transition: 0.2s;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .dropdown_item_wrapper:hover {
+    background: var(--lightest);
+    transition: 0.4s;
+  }
+  
+  .dropdown_item_wrapper button {
+    white-space: nowrap;
+    background: none;
+    border: none;
+    font-size: 1.1rem;
+    text-align: left;
+    cursor: pointer;
+    flex: 1;
+  }
+
+  .dropdown_item_wrapper:hover button {
+    color: var(--accent);
+    font-weight: 400;
+  }
+
+  .dropdown_item_wrapper .actions svg {
+    height: 20px;
+    width: 20px;
+    opacity: 0;
+    transition: 0.2s;
+  }
+
+  .dropdown_item_wrapper:hover .actions svg {
+    height: 20px;
+    width: 20px;
+    opacity: 1;
+    transition: 0.4s;
+    fill: var(--darkest);
+  }
+
+  .actions .edit_btn:hover svg, .actions .delete_btn:hover svg {
+    fill: var(--accent);
+  }
+
+  .actions .edit_btn {
+    margin-right: 0.5rem;
+  }
+  .dropdown_item {
+  }
+
+ 
